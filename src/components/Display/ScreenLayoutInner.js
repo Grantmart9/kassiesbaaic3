@@ -9,7 +9,7 @@ import { Fun } from "Pages/Fun";
 
 export const ScreenLayoutInner = ({ topBarOn }) => {
   return (
-    <div className="rounded-md">
+    <div>
       <Switch>
         <Route path={Routes[0].path}>
           <Landing topBarOn={topBarOn} />

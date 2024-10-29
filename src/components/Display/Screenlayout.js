@@ -70,8 +70,8 @@ export const ScreenLayout = () => {
                   <SideBar setTopBarOn={toggleTopBar} />
                 </div>
               </Slide>
-              <div style={{ marginLeft: "200px" }}>
-                <ScreenLayoutInner className="h-screen" topBarOn={topBarOn} />
+              <div style={{ marginLeft: "200px", height: "100vh" }}>
+                <ScreenLayoutInner topBarOn={topBarOn} />
               </div>
             </div>
           )}

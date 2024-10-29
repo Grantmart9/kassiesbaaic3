@@ -107,7 +107,7 @@ export const Landing = ({ topBarOn }) => {
 
   const RenderLanding = () => (
     <Fade in={true} timeout={1500}>
-      <div>
+      <div >
         <video
           className="w-full p-2 rounded-md"
           autoPlay
@@ -120,7 +120,7 @@ export const Landing = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <div
                 style={{
-                  width: "100vw",
+                
                   padding: "10pt",
                 }}
               >
@@ -129,7 +129,7 @@ export const Landing = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-                  width: "calc(100vw - 200px)",
+                 
                   padding: "10pt",
                   margin: "0",
                 }}
@@ -143,7 +143,7 @@ export const Landing = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <div
                 style={{
-                  width: "100vw",
+             
                   padding: "10pt",
                   margin: "0",
                 }}
@@ -153,7 +153,7 @@ export const Landing = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-                  width: "100vw",
+               
                   padding: "10pt",
                   margin: "0",
                 }}
@@ -170,11 +170,13 @@ export const Landing = ({ topBarOn }) => {
   return (
     <div
       style={{ margin: 0, padding: 0, overflowX: "hidden" }}
-      className="block"
+      className="block bg-gray-light rounded-md p-2 h-screen"
     >
       <RenderHeader />
-      <RenderLanding />
-      <RenderImages />
+      <div className="p-2">
+        <RenderLanding />
+        <RenderImages />
+      </div>
     </div>
   );
 };
