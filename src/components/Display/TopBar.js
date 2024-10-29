@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import { Size } from "./media-query";
 import Container from "@mui/material/Container";
 import {
-  topbarbgcolor,
+  layoutbgcolor,
   CompanyName,
   topbartextcolor,
   AppFont,
@@ -22,7 +22,7 @@ export const TopBar = ({ setTopBarOn }) => {
       position="fixed"
       elevation={1}
       sx={{
-        backgroundColor: topbarbgcolor,
+        backgroundColor: layoutbgcolor,
       }}
     >
       <Toolbar

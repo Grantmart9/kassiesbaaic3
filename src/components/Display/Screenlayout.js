@@ -4,7 +4,7 @@ import { ScreenLayoutInner } from "./ScreenLayoutInner";
 import { SideBar } from "./SideBar";
 import { Slide } from "@mui/material";
 import { Size } from "components/Display/media-query";
-import { sidebarbgcolor } from "./feutures";
+import {layoutbgcolor } from "./feutures";
 
 export const ScreenLayout = () => {
   const size = Size();
@@ -35,7 +35,7 @@ export const ScreenLayout = () => {
               <Slide in={true} timeout={1200} direction="down">
                 <div
                   style={{
-                    backgroundColor: sidebarbgcolor,
+                    backgroundColor: layoutbgcolor,
                     paddingBottom: "16pt",
                     position: "fixed",
                     top: 0, // Ensure it's at the top of the viewport
@@ -60,7 +60,7 @@ export const ScreenLayout = () => {
               >
                 <div
                   style={{
-                    backgroundColor: sidebarbgcolor,
+                    backgroundColor: layoutbgcolor,
                     height: "100vh",
                     position: "fixed",
                     width: "200px",

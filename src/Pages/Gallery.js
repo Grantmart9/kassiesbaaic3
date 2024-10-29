@@ -118,14 +118,14 @@ export const Gallery = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
-                className="text-center justify-center font-bold text-3xl mt-36"
+                className="text-center justify-center text-3xl mt-36"
               >
                 Gallery
               </h1>
             ) : (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
-                className="text-center justify-center font-bold text-3xl mt-20"
+                className="text-center justify-center text-3xl mt-20"
               >
                 Gallery
               </h1>
@@ -136,14 +136,14 @@ export const Gallery = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
-                className="text-center justify-center font-bold text-3xl mt-16"
+                className="text-center justify-center text-3xl mt-16"
               >
                 Gallery
               </h1>
             ) : (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
-                className="text-center justify-center font-bold text-3xl mt-20"
+                className="text-center justify-center text-3xl mt-20"
               >
                 Gallery
               </h1>
