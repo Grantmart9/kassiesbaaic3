@@ -22,6 +22,9 @@ import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
+const image_2 =
+  "url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQhTDyc7W-A5aQVSKqLfp6rL8LSOGi_fQGkWSmnh7C1Qs0VWw7lmcnbbhmFTXuVaL9g22FCiYN_z3D9uF8zIgUhS8-h7GAyBkrMj6-nKX4')";
+
 const itemData = [
   {
     img: I1,
@@ -82,10 +85,8 @@ const itemData = [
 ];
 
 const GalleryContext = () => {
-  const images = [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14];
-
   return (
-    <Box sx={{ overflowY: "scroll" }}>
+    <Box>
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -119,16 +120,12 @@ export const Gallery = ({ topBarOn }) => {
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center text-3xl mt-36"
-              >
-                Gallery
-              </h1>
+              ></h1>
             ) : (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center text-3xl mt-20"
-              >
-                Gallery
-              </h1>
+              ></h1>
             )}
           </div>
         ) : (
@@ -137,16 +134,12 @@ export const Gallery = ({ topBarOn }) => {
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center text-3xl mt-16"
-              >
-                Gallery
-              </h1>
+              ></h1>
             ) : (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center text-3xl mt-20"
-              >
-                Gallery
-              </h1>
+              ></h1>
             )}
           </div>
         )}
@@ -156,15 +149,14 @@ export const Gallery = ({ topBarOn }) => {
 
   const RenderGallery = () => (
     <Fade in={true} timeout={1500}>
-      <div>
+      <div className="flex bg-gray-light rounded-md ">
         {topBarOn ? (
           <div>
             {isResponsiveSize ? (
               <div
                 style={{
-                  width: "100vw",
                   padding: "10pt",
-                  margin: "0",
+                  height: "100vh",
                 }}
               >
                 <GalleryContext />
@@ -172,9 +164,9 @@ export const Gallery = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-                  width: "calc(100vw - 200px)",
                   padding: "10pt",
                   margin: "0",
+                  height: "100vh",
                 }}
               >
                 <GalleryContext />
@@ -186,9 +178,9 @@ export const Gallery = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <div
                 style={{
-                  width: "100vw",
                   padding: "10pt",
                   margin: "0",
+                  height: "100vh",
                 }}
               >
                 <GalleryContext />
@@ -196,7 +188,7 @@ export const Gallery = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-                  width: "100vw",
+                  height: "100vh",
                   padding: "10pt",
                   margin: "0",
                 }}
@@ -211,15 +203,23 @@ export const Gallery = ({ topBarOn }) => {
   );
 
   return (
-    <div
-      style={{ margin: 0, padding: 0, overflowX: "hidden" }}
-      className="block bg-gray-light rounded-md p-2 h-screen"
-    >
-      <RenderHeader />
-      <RenderGallery />
-      <video autoplay="true">
-        <source src="https://www.youtube.com/watch?v=aXBAz8uxEJU" type="url" />
-      </video>
+    <div className="block">
+      <div
+        style={{
+          backgroundImage: image_2,
+          backgroundSize: "cover",
+          opacity: "100%",
+          margin: 0,
+
+          padding: 0,
+          overflowX: "hidden",
+        }}
+      >
+        <RenderHeader />
+        <div className="p-2">
+          <RenderGallery />
+        </div>
+      </div>
     </div>
   );
 };

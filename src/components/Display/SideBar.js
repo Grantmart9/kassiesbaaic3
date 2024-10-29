@@ -9,11 +9,11 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 export const SideBar = ({ setTopBarOn }) => {
   const size = Size();
-  const isResponsiveSize = ["XS", "SM", "MD"].includes(size);
+  const isResponsiveSize = ["XS", "SM"].includes(size);
 
   return (
     <div className="flex align-center justify-center">
-      {size == "XS" || size == "SM" || size == "MD" ? (
+      {size == "XS" || size == "SM"  ? (
         <div
           className={`grid grid-flow-${
             isResponsiveSize ? "col" : "row"
@@ -52,8 +52,8 @@ export const SideBar = ({ setTopBarOn }) => {
             </Button>
           ))}
           <div className="flex align-center justify-center">
-            <div className="grid grid-cols-3 gap-1 mt-9">
-              <WhatsAppIcon />
+            <div className="grid grid-cols-2 gap-1 mt-9">
+              
               <InstagramIcon />
               <FacebookIcon />
             </div>

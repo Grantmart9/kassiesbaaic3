@@ -13,6 +13,7 @@ import {
   AppFont,
 } from "./feutures";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export const TopBar = ({ setTopBarOn }) => {
   var size = Size();
@@ -44,15 +45,18 @@ export const TopBar = ({ setTopBarOn }) => {
         >
           <MenuIcon />
         </IconButton>
-        <IconButton size="large" color={topbartextcolor}>
-          <LocalPhoneIcon />
+        <IconButton color={topbartextcolor}>
+          <LocalPhoneIcon sx={{ maxWidth: "60%" }} size="small" />
+        </IconButton>
+        <IconButton color={topbartextcolor}>
+          <WhatsAppIcon sx={{ maxWidth: "60%" }} size="small" />
         </IconButton>
         <Container>
           <div
             style={{ color: topbartextcolor, fontFamily: AppFont }}
             className={`text-gray-light text-center text-${
               isResponsiveSize ? "l" : "2xl"
-            } `}
+            } mr-${isResponsiveSize ? "20" : "16"} `}
           >
             {CompanyName}
           </div>

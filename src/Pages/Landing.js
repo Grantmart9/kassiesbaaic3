@@ -22,7 +22,12 @@ const image_1 =
 const LandingContext = () => {
   return (
     <div
-      style={{ fontFamily: AppFont, color: "black",backgroundColor:"white",opacity:"70%" }}
+      style={{
+        fontFamily: AppFont,
+        color: "black",
+        backgroundColor: "white",
+        opacity: "80%",
+      }}
       className="flex rounded-md text-center justify-center p-2"
     >
       Experience the charm of seaside living at Kassiesbaai Cottage, nestled in
@@ -80,7 +85,7 @@ export const Landing = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
-                className="text-center justify-center  text-3xl mt-16"
+                className="text-center justify-center  text-3xl mt-20"
               ></h1>
             ) : (
               <h1
@@ -114,7 +119,7 @@ export const Landing = ({ topBarOn }) => {
 
   const RenderLanding = () => (
     <Fade in={true} timeout={1500}>
-      <div>
+      <div className="h-screen">
         {topBarOn ? (
           <div>
             {isResponsiveSize ? (
@@ -164,20 +169,21 @@ export const Landing = ({ topBarOn }) => {
   );
 
   return (
-    <div
-      style={{
-        margin: 0,
-        padding: 0,
-        overflowX: "hidden",
-        backgroundImage: image_1,
-        backgroundSize: "cover",
-        opacity: "90%",
-      }}
-      className="block rounded-md p-2 h-screen"
-    >
-      <RenderHeader />
-      <div className="p-2">
-        <RenderLanding />
+    <div className="block">
+      <div
+        style={{
+          backgroundImage: image_1,
+          backgroundSize: "cover",
+          opacity: "85%",
+          margin: 0,
+          padding: 0,
+          overflowX: "hidden",
+        }}
+      >
+        <RenderHeader />
+        <div className="p-2">
+          <RenderLanding />
+        </div>
       </div>
     </div>
   );
