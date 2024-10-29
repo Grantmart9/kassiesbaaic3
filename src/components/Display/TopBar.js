@@ -23,7 +23,7 @@ export const TopBar = ({ setTopBarOn }) => {
       elevation={1}
       sx={{
         backgroundColor: layoutbgcolor,
-        opacity:"70%"
+        opacity: "70%",
       }}
     >
       <Toolbar
@@ -51,8 +51,8 @@ export const TopBar = ({ setTopBarOn }) => {
           <div
             style={{ color: topbartextcolor, fontFamily: AppFont }}
             className={`text-gray-light text-center text-${
-              isResponsiveSize ? "xl" : "2xl"
-            } mr-20`}
+              isResponsiveSize ? "l" : "2xl"
+            } `}
           >
             {CompanyName}
           </div>

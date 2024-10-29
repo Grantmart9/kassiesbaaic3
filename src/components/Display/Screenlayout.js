@@ -4,7 +4,7 @@ import { ScreenLayoutInner } from "./ScreenLayoutInner";
 import { SideBar } from "./SideBar";
 import { Slide } from "@mui/material";
 import { Size } from "components/Display/media-query";
-import {layoutbgcolor } from "./feutures";
+import { layoutbgcolor } from "./feutures";
 
 export const ScreenLayout = () => {
   const size = Size();
@@ -65,14 +65,14 @@ export const ScreenLayout = () => {
                     height: "100vh",
                     position: "fixed",
                     opacity: "60%",
-                    width: "200px",
+                    width: "130px",
                     zIndex: 1000, // Ensure it’s on top of other content
                   }}
                 >
                   <SideBar setTopBarOn={toggleTopBar} />
                 </div>
               </Slide>
-              <div style={{ marginLeft: "200px", height: "100vh" }}>
+              <div style={{ marginLeft: "130px", height: "100vh" }}>
                 <ScreenLayoutInner topBarOn={topBarOn} />
               </div>
             </div>
