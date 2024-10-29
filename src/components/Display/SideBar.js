@@ -3,7 +3,6 @@ import { Button } from "@mui/material";
 import { TopBarButtonStyle } from "./feutures";
 import { Routes } from "components/Routes";
 import { Size } from "components/Display/media-query";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
@@ -13,7 +12,7 @@ export const SideBar = ({ setTopBarOn }) => {
 
   return (
     <div className="flex align-center justify-center">
-      {size == "XS" || size == "SM"  ? (
+      {size == "XS" || size == "SM" ? (
         <div
           className={`grid grid-flow-${
             isResponsiveSize ? "col" : "row"
@@ -24,9 +23,10 @@ export const SideBar = ({ setTopBarOn }) => {
               key={page.path} // Add a key prop for better list rendering
               href={page.path}
               sx={TopBarButtonStyle}
+              onClick={setTopBarOn}
               className="shadow-md"
               variant="contained"
-              style={{textTransform: 'none'}}
+              style={{ textTransform: "none" }}
             >
               {page.name}
             </Button>
@@ -46,14 +46,13 @@ export const SideBar = ({ setTopBarOn }) => {
               sx={TopBarButtonStyle}
               className="shadow-md"
               variant="contained"
-              style={{textTransform: 'none'}}
+              style={{ textTransform: "none" }}
             >
               {page.name}
             </Button>
           ))}
           <div className="flex align-center justify-center">
             <div className="grid grid-cols-2 gap-1 mt-9">
-              
               <InstagramIcon />
               <FacebookIcon />
             </div>

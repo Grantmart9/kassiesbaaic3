@@ -9,7 +9,7 @@ import { layoutbgcolor } from "./feutures";
 export const ScreenLayout = () => {
   const size = Size();
   const [topBarOn, setTopBarOn] = useState(
-    size == "XS" || size == "SM" || size == "MD" ? false : true
+    false 
   );
 
   const toggleTopBar = () => {
