@@ -23,6 +23,7 @@ export const TopBar = ({ setTopBarOn }) => {
       elevation={1}
       sx={{
         backgroundColor: layoutbgcolor,
+        opacity:"70%"
       }}
     >
       <Toolbar

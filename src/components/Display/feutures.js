@@ -6,7 +6,7 @@ export const textcolor = "#cccaca";
 export const pagetitlecolor = "#73787a";
 export const cardtitlecolor = "#cccaca";
 
-export const layoutbgcolor = "#d1e1e8";
+export const layoutbgcolor = "#edf7fc";
 export const pagebgcolor = "#7d9db5";
 
 export const AppFont = "Nanum Gothic, sans-serif";

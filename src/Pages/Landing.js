@@ -16,13 +16,14 @@ import I2 from "Images/I2.jpg";
 import I4 from "Images/I4.jpg";
 import { AppFont } from "components/Display/feutures";
 
-
+const image_1 =
+  "url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT_dVDHFoNRWrpXkXjCBha5w3wdWxb3bU_h0UJI5m2UJP6kpDCKEAFxxMOA2EmxW4m8JDYMXDybznAfnavsEcqdeDUYMrPCjfJ_iyhb_A')";
 
 const LandingContext = () => {
   return (
     <div
-      style={{ fontFamily: AppFont }}
-      className="flex text-center justify-center p-2"
+      style={{ fontFamily: AppFont, color: "black",backgroundColor:"white",opacity:"70%" }}
+      className="flex rounded-md text-center justify-center p-2"
     >
       Experience the charm of seaside living at Kassiesbaai Cottage, nestled in
       the picturesque coastal village of Arniston. Just steps away from the
@@ -66,16 +67,12 @@ export const Landing = ({ topBarOn }) => {
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center text-3xl mt-36"
-              >
-                Welcome
-              </h1>
+              ></h1>
             ) : (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center text-3xl mt-20"
-              >
-                Welcome
-              </h1>
+              ></h1>
             )}
           </div>
         ) : (
@@ -84,16 +81,12 @@ export const Landing = ({ topBarOn }) => {
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center  text-3xl mt-16"
-              >
-                Welcome
-              </h1>
+              ></h1>
             ) : (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center text-3xl mt-20"
-              >
-                Welcome
-              </h1>
+              ></h1>
             )}
           </div>
         )}
@@ -111,16 +104,17 @@ export const Landing = ({ topBarOn }) => {
     );
   };
 
+  //<video
+  //        className="w-full p-2 rounded-md"
+  //        autoPlay
+  //        loop
+  //        src={kassies}
+  //        type="video/mp4"
+  //      />
+
   const RenderLanding = () => (
     <Fade in={true} timeout={1500}>
       <div>
-        <video
-          className="w-full p-2 rounded-md"
-          autoPlay
-          loop
-          src={kassies}
-          type="video/mp4"
-        />
         {topBarOn ? (
           <div>
             {isResponsiveSize ? (
@@ -171,13 +165,19 @@ export const Landing = ({ topBarOn }) => {
 
   return (
     <div
-      style={{ margin: 0, padding: 0, overflowX: "hidden" }}
-      className="block bg-gray-light rounded-md p-2 h-screen"
+      style={{
+        margin: 0,
+        padding: 0,
+        overflowX: "hidden",
+        backgroundImage: image_1,
+        backgroundSize: "cover",
+        opacity: "90%",
+      }}
+      className="block rounded-md p-2 h-screen"
     >
       <RenderHeader />
       <div className="p-2">
         <RenderLanding />
-        <RenderImages />
       </div>
     </div>
   );
