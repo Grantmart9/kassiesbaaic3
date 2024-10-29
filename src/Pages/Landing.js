@@ -17,19 +17,28 @@ import I4 from "Images/I4.jpg";
 
 const LandingContext = () => {
   return (
-    <div>
-      Offering barbecue facilities and sea view, Kassiesbaai Cottage is located
-      in Arniston, a few steps from Arniston Beach and 23 km from De Mond Nature
-      Reserve. This beachfront property offers access to darts and free WiFi.
-      The apartment also offers facilities for disabled guests. This apartment
-      is equipped with 1 bedroom, a kitchen with an oven and a microwave, a
-      flat-screen TV, a seating area and 1 bathroom equipped with a walk-in
-      shower. The tiled floors, fireplace and peaceful vibe add to the ambience
-      of the room. For added privacy, the accommodation features a private
-      entrance. Guests at the apartment will be able to enjoy activities in and
-      around Arniston, like cycling. Shipwreck Museum - Bredasdorp is 25 km from
-      Kassiesbaai Cottage, while Arniston Cave is 1.4 km away. Couples
-      particularly like the location — they rated it 9.6 for a two-person trip.
+    <div className="flex text-center justify-center p-2">
+      Experience the charm of seaside living at Kassiesbaai Cottage, nestled in
+      the picturesque coastal village of Arniston. Just steps away from the
+      pristine Arniston Beach and a short drive to De Mond Nature Reserve, this
+      beachfront gem is the perfect retreat for nature lovers and relaxation
+      seekers alike. Kassiesbaai Cottage features inviting barbecue facilities
+      with stunning sea views, ideal for enjoying al fresco dining. Stay
+      connected with complimentary WiFi while engaging in fun games of darts.
+      Our thoughtfully designed apartment is fully accessible, ensuring an
+      enjoyable stay for all guests. This cozy getaway boasts a well-appointed
+      bedroom, a modern kitchen complete with an oven and microwave, and a
+      comfortable seating area, all enhanced by a flat-screen TV. The soothing
+      ambiance is complemented by tiled floors and a welcoming fireplace,
+      creating a peaceful atmosphere to unwind. For your privacy, the
+      accommodation includes a separate entrance. Explore the beautiful
+      surroundings with activities such as cycling, and discover local
+      attractions like the Shipwreck Museum in Bredasdorp, only 25 km away, or
+      the captivating Arniston Cave, just 1.4 km from your doorstep. Couples
+      will adore the romantic setting, with a remarkable rating of 9.6 for
+      two-person getaways. Make Kassiesbaai Cottage your next holiday
+      destination and indulge in a perfect blend of comfort and adventure by the
+      sea!
     </div>
   );
 };
@@ -165,7 +174,7 @@ export const Landing = ({ topBarOn }) => {
     >
       <RenderHeader />
       <RenderLanding />
-      <RenderImages/>
+      <RenderImages />
     </div>
   );
 };

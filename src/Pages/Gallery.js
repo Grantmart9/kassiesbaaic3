@@ -25,7 +25,7 @@ const GalleryContext = () => {
   return (
     <div className="grid md:grid-cols-2 gap-2">
       {images.map((image, index) => (
-        <div key={index} className="bg-gray rounded-md shadow-md p-2">
+        <div key={index} className="bg-gray-light rounded-md shadow-md p-2">
           <CardMedia sx={{ height: 250 }} image={image} />
         </div>
       ))}
