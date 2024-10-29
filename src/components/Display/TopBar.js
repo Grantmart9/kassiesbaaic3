@@ -30,7 +30,7 @@ export const TopBar = ({ setTopBarOn }) => {
         sx={{
           display: "flex",
           justifyContent: "flex-start",
-          marginLeft: "20pt",
+          marginLeft: "5pt",
         }} // Align items to the left
       >
         <IconButton
@@ -50,15 +50,13 @@ export const TopBar = ({ setTopBarOn }) => {
           <div
             style={{ color: topbartextcolor, fontFamily: AppFont }}
             className={`text-gray-light text-center text-${
-              isResponsiveSize ? "2xl" : "3xl"
+              isResponsiveSize ? "xl" : "2xl"
             } mr-20`}
           >
             {CompanyName}
           </div>
-          
         </Container>
       </Toolbar>
-    
     </AppBar>
   );
 };

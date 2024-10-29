@@ -8,7 +8,7 @@ import {
   pagetitlecolor,
   cardtitlecolor,
   pagebgcolor,
-  fontType,
+  AppFont,
 } from "components/Display/feutures";
 
 export const Fun = ({ topBarOn }) => {
@@ -24,14 +24,14 @@ export const Fun = ({ topBarOn }) => {
         <Slide in={true} timeout={500}>
           {topBarOn ? (
             <h1
-              style={{ color: pagetitlecolor, fontFamily: fontType }}
+              style={{ color: pagetitlecolor, fontFamily: AppFont }}
               className="text-center font-bold text-3xl mt-32 pt-2"
             >
               Fun Things To Do
             </h1>
           ) : (
             <h1
-              style={{ color: pagetitlecolor, fontFamily: fontType }}
+              style={{ color: pagetitlecolor, fontFamily: AppFont }}
               className="text-center font-bold text-3xl mt-20 pt-2"
             >
               Fun Things To Do
@@ -41,7 +41,7 @@ export const Fun = ({ topBarOn }) => {
       ) : (
         <Fade in={true} timeout={1000}>
           <h1
-            style={{ color: pagetitlecolor, fontFamily: fontType }}
+            style={{ color: pagetitlecolor, fontFamily: AppFont }}
             className="text-center font-bold text-3xl mt-16 pt-2"
           >
             Fun Things To Do

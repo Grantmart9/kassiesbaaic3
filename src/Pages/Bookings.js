@@ -8,7 +8,7 @@ import {
   pagetitlecolor,
   cardtitlecolor,
   pagebgcolor,
-  fontType,
+  AppFont,
 } from "components/Display/feutures";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -71,14 +71,14 @@ export const Bookings = ({ topBarOn }) => {
         <>
           {topBarOn ? (
             <h1
-              style={{ color: pagetitlecolor, fontFamily: fontType }}
+              style={{ color: pagetitlecolor, fontFamily: AppFont }}
               className="text-center font-bold text-3xl mt-32 pt-2"
             >
               Bookings
             </h1>
           ) : (
             <h1
-              style={{ color: pagetitlecolor, fontFamily: fontType }}
+              style={{ color: pagetitlecolor, fontFamily: AppFont }}
               className="text-center font-bold text-3xl mt-20 pt-2"
             >
               Bookings
@@ -88,7 +88,7 @@ export const Bookings = ({ topBarOn }) => {
       ) : (
         <>
           <h1
-            style={{ color: pagetitlecolor, fontFamily: fontType }}
+            style={{ color: pagetitlecolor, fontFamily: AppFont }}
             className="text-center font-bold text-3xl mt-16 pt-2"
           >
             Bookings

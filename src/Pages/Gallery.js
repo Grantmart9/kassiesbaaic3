@@ -3,7 +3,7 @@ import Fade from "@mui/material/Fade";
 import { Slide } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import { Size } from "components/Display/media-query";
-import { pagetitlecolor, fontType } from "components/Display/feutures";
+import { pagetitlecolor, AppFont } from "components/Display/feutures";
 import I1 from "Images/I1.jpg";
 import I2 from "Images/I2.jpg";
 import I3 from "Images/I3.jpg";
@@ -117,14 +117,14 @@ export const Gallery = ({ topBarOn }) => {
           <div>
             {isResponsiveSize ? (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center font-bold text-3xl mt-36"
               >
                 Gallery
               </h1>
             ) : (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center font-bold text-3xl mt-20"
               >
                 Gallery
@@ -135,14 +135,14 @@ export const Gallery = ({ topBarOn }) => {
           <div>
             {isResponsiveSize ? (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center font-bold text-3xl mt-16"
               >
                 Gallery
               </h1>
             ) : (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
                 className="text-center justify-center font-bold text-3xl mt-20"
               >
                 Gallery

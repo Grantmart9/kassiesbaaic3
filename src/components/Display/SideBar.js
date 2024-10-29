@@ -25,6 +25,8 @@ export const SideBar = ({ setTopBarOn }) => {
               href={page.path}
               sx={TopBarButtonStyle}
               className="shadow-md"
+              variant="contained"
+              style={{textTransform: 'none'}}
             >
               {page.name}
             </Button>
@@ -32,7 +34,6 @@ export const SideBar = ({ setTopBarOn }) => {
         </div>
       ) : (
         <div
-          style={{ minWidth: "160px" }}
           className={`grid grid-flow-${
             isResponsiveSize ? "col" : "row"
           } gap-4 mt-${isResponsiveSize ? "20" : "24"} px-2`}
@@ -44,6 +45,8 @@ export const SideBar = ({ setTopBarOn }) => {
               href={page.path}
               sx={TopBarButtonStyle}
               className="shadow-md"
+              variant="contained"
+              style={{textTransform: 'none'}}
             >
               {page.name}
             </Button>

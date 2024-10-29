@@ -9,7 +9,7 @@ import {
   pagetitlecolor,
   cardtitlecolor,
   pagebgcolor,
-  fontType,
+  AppFont,
 } from "components/Display/feutures";
 import Card from "@mui/material/Card";
 
@@ -73,7 +73,7 @@ export const Contact = ({ topBarOn }) => {
             <div className="grid grid-flow-row gap-1 px-2 mt-36">
               <Slide in={true} timeout={500}>
                 <h1
-                  style={{ color: pagetitlecolor, fontFamily: fontType }}
+                  style={{ color: pagetitlecolor, fontFamily: AppFont }}
                   className="text-center justify-center font-bold text-3xl"
                 >
                   Contact Us
@@ -89,7 +89,7 @@ export const Contact = ({ topBarOn }) => {
             <div className="grid grid-flow-row gap-1 px-2 mt-20">
               <Slide in={true} timeout={500}>
                 <h1
-                  style={{ color: pagetitlecolor, fontFamily: fontType }}
+                  style={{ color: pagetitlecolor, fontFamily: AppFont }}
                   className="text-center justify-center font-bold text-3xl"
                 >
                   Contact Us
@@ -109,7 +109,7 @@ export const Contact = ({ topBarOn }) => {
             <div className="grid grid-flow-row gap-1 px-2 mt-16">
               <Fade in={true} timeout={1000}>
                 <h1
-                  style={{ color: pagetitlecolor, fontFamily: fontType }}
+                  style={{ color: pagetitlecolor, fontFamily: AppFont }}
                   className="text-center justify-center font-bold text-3xl"
                 >
                   Contact Us
@@ -125,7 +125,7 @@ export const Contact = ({ topBarOn }) => {
             <div className="grid grid-flow-row gap-1 px-2 mt-16">
               <Fade in={true} timeout={1000}>
                 <h1
-                  style={{ color: pagetitlecolor, fontFamily: fontType }}
+                  style={{ color: pagetitlecolor, fontFamily: AppFont }}
                   className="text-center justify-center font-bold text-3xl"
                 >
                   Contact Us

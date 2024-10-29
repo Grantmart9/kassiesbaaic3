@@ -6,8 +6,8 @@ export const cardbgcolor = "#5a5c5b";
 export const textcolor = "#cccaca";
 export const pagetitlecolor = "#73787a";
 export const cardtitlecolor = "#cccaca";
-export const fontType = "Montserrat, sans-serif";
-export const AppFont = "Nanum Gothic";
+
+export const AppFont = "Nanum Gothic, sans-serif";
 
 export const TopBarButtonStyle = {
   bgcolor: "#ebf6fa",
@@ -17,8 +17,3 @@ export const TopBarButtonStyle = {
 };
 
 export const CompanyName = "Kassiesbaai Cottage";
-
-export const BlueTheme = {};
-export const RedTheme = {};
-export const DarkTheme = {};
-export const LightTheme = {};
