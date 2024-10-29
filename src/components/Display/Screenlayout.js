@@ -33,7 +33,7 @@ export const ScreenLayout = () => {
           {isResponsiveSize ? (
             <div>
               <Slide in={true} timeout={1200} direction="down">
-                <div 
+                <div
                   style={{
                     backgroundColor: sidebarbgcolor,
                     paddingBottom: "16pt",
@@ -59,12 +59,18 @@ export const ScreenLayout = () => {
                 direction={"right"}
               >
                 <div
-                  style={{ backgroundColor: sidebarbgcolor, width: "200px" }}
+                  style={{
+                    backgroundColor: sidebarbgcolor,
+                    height: "100vh",
+                    position: "fixed",
+                    width: "200px",
+                    zIndex: 1000, // Ensure it’s on top of other content
+                  }}
                 >
-                  <SideBar  setTopBarOn={toggleTopBar} />
+                  <SideBar setTopBarOn={toggleTopBar} />
                 </div>
               </Slide>
-              <div>
+              <div style={{ marginLeft: "200px" }}>
                 <ScreenLayoutInner className="h-screen" topBarOn={topBarOn} />
               </div>
             </div>
