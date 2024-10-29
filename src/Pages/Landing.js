@@ -14,10 +14,16 @@ import kassies from "Videos/kassies.mp4";
 import I8 from "Images/I8.jpg";
 import I2 from "Images/I2.jpg";
 import I4 from "Images/I4.jpg";
+import { AppFont } from "components/Display/feutures";
+
+
 
 const LandingContext = () => {
   return (
-    <div className="flex text-center justify-center p-2">
+    <div
+      style={{ fontFamily: AppFont }}
+      className="flex text-center justify-center p-2"
+    >
       Experience the charm of seaside living at Kassiesbaai Cottage, nestled in
       the picturesque coastal village of Arniston. Just steps away from the
       pristine Arniston Beach and a short drive to De Mond Nature Reserve, this
@@ -58,15 +64,15 @@ export const Landing = ({ topBarOn }) => {
           <div>
             {isResponsiveSize ? (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
-                className="text-center justify-center font-bold text-3xl mt-36"
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center text-3xl mt-36"
               >
                 Welcome
               </h1>
             ) : (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
-                className="text-center justify-center font-bold text-3xl mt-20"
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center text-3xl mt-20"
               >
                 Welcome
               </h1>
@@ -76,15 +82,15 @@ export const Landing = ({ topBarOn }) => {
           <div>
             {isResponsiveSize ? (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
-                className="text-center justify-center font-bold text-3xl mt-16"
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center  text-3xl mt-16"
               >
                 Welcome
               </h1>
             ) : (
               <h1
-                style={{ color: pagetitlecolor, fontFamily: fontType }}
-                className="text-center justify-center font-bold text-3xl mt-20"
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center text-3xl mt-20"
               >
                 Welcome
               </h1>
@@ -107,7 +113,7 @@ export const Landing = ({ topBarOn }) => {
 
   const RenderLanding = () => (
     <Fade in={true} timeout={1500}>
-      <div >
+      <div>
         <video
           className="w-full p-2 rounded-md"
           autoPlay
@@ -120,7 +126,6 @@ export const Landing = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <div
                 style={{
-                
                   padding: "10pt",
                 }}
               >
@@ -129,7 +134,6 @@ export const Landing = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-                 
                   padding: "10pt",
                   margin: "0",
                 }}
@@ -143,7 +147,6 @@ export const Landing = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <div
                 style={{
-             
                   padding: "10pt",
                   margin: "0",
                 }}
@@ -153,7 +156,6 @@ export const Landing = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-               
                   padding: "10pt",
                   margin: "0",
                 }}

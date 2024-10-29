@@ -2,10 +2,17 @@ import React, { useState, useEffect, useCallback } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Button } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import { Size } from "./media-query";
 import Container from "@mui/material/Container";
-import { topbarbgcolor, CompanyName, topbartextcolor } from "./feutures";
+import {
+  topbarbgcolor,
+  CompanyName,
+  topbartextcolor,
+  AppFont,
+} from "./feutures";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 export const TopBar = ({ setTopBarOn }) => {
   var size = Size();
@@ -36,17 +43,22 @@ export const TopBar = ({ setTopBarOn }) => {
         >
           <MenuIcon />
         </IconButton>
+        <IconButton size="large" color={topbartextcolor}>
+          <LocalPhoneIcon />
+        </IconButton>
         <Container>
           <div
-            style={{ color: topbartextcolor }}
-            className={`text-gray-light text-center font-bold text-${
+            style={{ color: topbartextcolor, fontFamily: AppFont }}
+            className={`text-gray-light text-center text-${
               isResponsiveSize ? "2xl" : "3xl"
             } mr-20`}
           >
             {CompanyName}
           </div>
+          
         </Container>
       </Toolbar>
+    
     </AppBar>
   );
 };

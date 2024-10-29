@@ -217,6 +217,9 @@ export const Gallery = ({ topBarOn }) => {
     >
       <RenderHeader />
       <RenderGallery />
+      <video autoplay="true">
+        <source src="https://www.youtube.com/watch?v=aXBAz8uxEJU" type="url" />
+      </video>
     </div>
   );
 };
