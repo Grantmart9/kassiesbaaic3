@@ -149,14 +149,17 @@ export const Gallery = ({ topBarOn }) => {
 
   const RenderGallery = () => (
     <Fade in={true} timeout={1500}>
-      <div className="flex bg-gray-light rounded-md ">
+      <div
+        style={{ opacity: "95%", backgroundColor: "#ebf0f2" }}
+        className="flex rounded-md "
+      >
         {topBarOn ? (
           <div>
             {isResponsiveSize ? (
               <div
                 style={{
-                  padding: "10pt",
-                  height: "100vh",
+                  padding: "5pt",
+                  opacity: "100%",
                 }}
               >
                 <GalleryContext />
@@ -164,9 +167,9 @@ export const Gallery = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-                  padding: "10pt",
+                  padding: "5pt",
+                  opacity: "100%",
                   margin: "0",
-                  height: "100vh",
                 }}
               >
                 <GalleryContext />
@@ -178,9 +181,9 @@ export const Gallery = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <div
                 style={{
-                  padding: "10pt",
+                  padding: "5pt",
+                  opacity: "100%",
                   margin: "0",
-                  height: "100vh",
                 }}
               >
                 <GalleryContext />
@@ -188,8 +191,8 @@ export const Gallery = ({ topBarOn }) => {
             ) : (
               <div
                 style={{
-                  height: "100vh",
-                  padding: "10pt",
+                  padding: "5pt",
+                  opacity: "100%",
                   margin: "0",
                 }}
               >
@@ -210,7 +213,6 @@ export const Gallery = ({ topBarOn }) => {
           backgroundSize: "cover",
           opacity: "100%",
           margin: 0,
-
           padding: 0,
           overflowX: "hidden",
         }}
