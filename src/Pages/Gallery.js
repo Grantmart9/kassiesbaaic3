@@ -213,7 +213,7 @@ export const Gallery = ({ topBarOn }) => {
   return (
     <div
       style={{ margin: 0, padding: 0, overflowX: "hidden" }}
-      className="block"
+      className="block bg-gray-light rounded-md p-2 h-screen"
     >
       <RenderHeader />
       <RenderGallery />
