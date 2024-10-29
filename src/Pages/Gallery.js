@@ -18,18 +18,87 @@ import I11 from "Images/I11.jpg";
 import I12 from "Images/I12.jpg";
 import I13 from "Images/I13.jpg";
 import I14 from "Images/I14.jpg";
+import Box from "@mui/material/Box";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+
+const itemData = [
+  {
+    img: I1,
+    title: "Bed",
+  },
+  {
+    img: I2,
+    title: "Books",
+  },
+  {
+    img: I3,
+    title: "Sink",
+  },
+  {
+    img: I4,
+    title: "Kitchen",
+  },
+  {
+    img: I5,
+    title: "Blinds",
+  },
+  {
+    img: I6,
+    title: "Chairs",
+  },
+  {
+    img: I7,
+    title: "Laptop",
+  },
+  {
+    img: I8,
+    title: "Doors",
+  },
+  {
+    img: I9,
+    title: "Coffee",
+  },
+  {
+    img: I10,
+    title: "Storage",
+  },
+  {
+    img: I11,
+    title: "Candle",
+  },
+  {
+    img: I12,
+    title: "Coffee table",
+  },
+  {
+    img: I13,
+    title: "Coffee table",
+  },
+  {
+    img: I14,
+    title: "Coffee table",
+  },
+];
 
 const GalleryContext = () => {
   const images = [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13, I14];
 
   return (
-    <div className="grid md:grid-cols-2 gap-2">
-      {images.map((image, index) => (
-        <div key={index} className="bg-gray-light rounded-md shadow-md p-2">
-          <CardMedia sx={{ height: 250 }} image={image} />
-        </div>
-      ))}
-    </div>
+    <Box sx={{ overflowY: "scroll" }}>
+      <ImageList variant="masonry" cols={3} gap={8}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              alt={item.title}
+              loading="lazy"
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </Box>
   );
 };
 
