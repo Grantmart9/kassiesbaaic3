@@ -21,7 +21,7 @@ const image_1 =
 
 const LandingContext = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-2">
+    <div className="grid grid-flow-row gap-2">
       <Slide direction="right" in={true} timeout={1400}>
         <div
           className="flex rounded-md text-center justify-center"
@@ -47,6 +47,25 @@ const LandingContext = () => {
           enhanced by a flat-screen TV.
         </div>
       </Slide>
+      <div
+        className="rounded-md"
+        style={{
+          fontFamily: AppFont,
+          color: "black",
+          backgroundColor: "white",
+          opacity: "90%",
+          padding: "5pt",
+        }}
+      >
+        <video
+          autoPlay
+          muted
+          loop
+          src={kassies}
+          width={"100%"}
+          type="video/mp4"
+        />
+      </div>
       <Slide direction="left" in={true} timeout={1400}>
         <div
           className="flex rounded-md text-center justify-center"
@@ -90,7 +109,7 @@ export const Landing = ({ topBarOn }) => {
             {isResponsiveSize ? (
               <h1
                 style={{ color: pagetitlecolor, fontFamily: AppFont }}
-                className="text-center justify-center text-3xl mt-36"
+                className="text-center justify-center text-3xl mt-32"
               ></h1>
             ) : (
               <h1
@@ -120,15 +139,15 @@ export const Landing = ({ topBarOn }) => {
 
   const RenderImages = () => {
     return (
-      <div className="grid grid-cols-3 mx-2">
-        <img src={I8} />
-        <img src={I2} />
-        <img src={I4} />
+      <div style={{ backgroundColor: "white" }} className="rounded-md mx-5">
+        <div className="grid grid-cols-3 p-2">
+          <img src={I8} />
+          <img src={I2} />
+          <img src={I4} />
+        </div>
       </div>
     );
   };
-
-  //
 
   const RenderLanding = () => (
     <Fade in={true} timeout={1500}>
@@ -194,16 +213,7 @@ export const Landing = ({ topBarOn }) => {
         }}
       >
         <RenderHeader />
-        <div>
-          <video
-            autoPlay
-            muted
-            loop
-            src={kassies}
-            width={"100%"}
-            type="video/mp4"
-          />
-        </div>
+        <RenderImages />
         <div className="p-2">
           <RenderLanding />
         </div>
