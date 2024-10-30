@@ -23,7 +23,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
 const image_2 =
-  "url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQhTDyc7W-A5aQVSKqLfp6rL8LSOGi_fQGkWSmnh7C1Qs0VWw7lmcnbbhmFTXuVaL9g22FCiYN_z3D9uF8zIgUhS8-h7GAyBkrMj6-nKX4')";
+  "url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR_fY5XZMLuWjs_uMT7NBbGthDbHaOOeqWOFQMiMHI-yaeES2NmPA_6eU2iCCs7ffEQAIUwei-zVpLHculrWVPxyhs4gArgM1JigYY18Q')";
 
 const itemData = [
   {
@@ -149,10 +149,7 @@ export const Gallery = ({ topBarOn }) => {
 
   const RenderGallery = () => (
     <Fade in={true} timeout={1500}>
-      <div
-        style={{ opacity: "95%", backgroundColor: "#ebf0f2" }}
-        className="flex rounded-md "
-      >
+      <div>
         {topBarOn ? (
           <div>
             {isResponsiveSize ? (

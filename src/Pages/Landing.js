@@ -47,25 +47,27 @@ const LandingContext = () => {
           enhanced by a flat-screen TV.
         </div>
       </Slide>
-      <div
-        className="rounded-md"
-        style={{
-          fontFamily: AppFont,
-          color: "black",
-          backgroundColor: "white",
-          opacity: "90%",
-          padding: "5pt",
-        }}
-      >
-        <video
-          autoPlay
-          muted
-          loop
-          src={kassies}
-          width={"100%"}
-          type="video/mp4"
-        />
-      </div>
+      <Fade in={true} timeout={1200}>
+        <div
+          className="rounded-md"
+          style={{
+            fontFamily: AppFont,
+            color: "black",
+            backgroundColor: "white",
+            opacity: "90%",
+            padding: "5pt",
+          }}
+        >
+          <video
+            autoPlay
+            muted
+            loop
+            src={kassies}
+            width={"100%"}
+            type="video/mp4"
+          />
+        </div>
+      </Fade>
       <Slide direction="left" in={true} timeout={1400}>
         <div
           className="flex rounded-md text-center justify-center"
@@ -139,36 +141,29 @@ export const Landing = ({ topBarOn }) => {
 
   const RenderImages = () => {
     return (
-      <div style={{ backgroundColor: "white" }} className="rounded-md mx-5">
-        <div className="grid grid-cols-3 p-2">
-          <img src={I8} />
-          <img src={I2} />
-          <img src={I4} />
+      <Fade in={true} timeout={1200}>
+        <div style={{ backgroundColor: "white" }} className="rounded-md">
+          <div className="grid grid-cols-3 p-2">
+            <img src={I8} />
+            <img src={I2} />
+            <img src={I4} />
+          </div>
         </div>
-      </div>
+      </Fade>
     );
   };
 
   const RenderLanding = () => (
     <Fade in={true} timeout={1500}>
-      <div className="h-screen">
+      <div className="h-screen pt-2">
         {topBarOn ? (
           <div>
             {isResponsiveSize ? (
-              <div
-                style={{
-                  padding: "10pt",
-                }}
-              >
+              <div>
                 <LandingContext />
               </div>
             ) : (
-              <div
-                style={{
-                  padding: "10pt",
-                  margin: "0",
-                }}
-              >
+              <div>
                 <LandingContext />
               </div>
             )}
@@ -176,21 +171,11 @@ export const Landing = ({ topBarOn }) => {
         ) : (
           <div>
             {isResponsiveSize ? (
-              <div
-                style={{
-                  padding: "10pt",
-                  margin: "0",
-                }}
-              >
+              <div>
                 <LandingContext />
               </div>
             ) : (
-              <div
-                style={{
-                  padding: "10pt",
-                  margin: "0",
-                }}
-              >
+              <div>
                 <LandingContext />
               </div>
             )}
@@ -213,8 +198,8 @@ export const Landing = ({ topBarOn }) => {
         }}
       >
         <RenderHeader />
-        <RenderImages />
         <div className="p-2">
+          <RenderImages />
           <RenderLanding />
         </div>
       </div>
