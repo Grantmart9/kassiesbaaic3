@@ -38,7 +38,7 @@ export const ScreenLayout = () => {
                     backgroundColor: layoutbgcolor,
                     paddingBottom: "16pt",
                     position: "fixed",
-                    opacity: "60%",
+                    opacity: "70%",
                     top: 0, // Ensure it's at the top of the viewport
                     left: 0, // Align to the left edge
                     right: 0, // Stretch to the right edge
