@@ -19,6 +19,9 @@ import { AppFont } from "components/Display/feutures";
 const image_1 =
   "url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT_dVDHFoNRWrpXkXjCBha5w3wdWxb3bU_h0UJI5m2UJP6kpDCKEAFxxMOA2EmxW4m8JDYMXDybznAfnavsEcqdeDUYMrPCjfJ_iyhb_A')";
 
+const image_2 =
+  "url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR_fY5XZMLuWjs_uMT7NBbGthDbHaOOeqWOFQMiMHI-yaeES2NmPA_6eU2iCCs7ffEQAIUwei-zVpLHculrWVPxyhs4gArgM1JigYY18Q')";
+
 const LandingContext = () => {
   return (
     <div className="grid grid-flow-row gap-2">
@@ -194,11 +197,12 @@ export const Landing = ({ topBarOn }) => {
           opacity: "85%",
           margin: 0,
           padding: 0,
+          position: "sticky",
           overflowX: "hidden",
         }}
       >
-        <RenderHeader />
         <div className="p-2">
+          <RenderHeader />
           <RenderImages />
           <RenderLanding />
         </div>
