@@ -194,9 +194,8 @@ export const Landing = ({ topBarOn }) => {
         }}
       >
         <RenderHeader />
-        <div className="px-4">
+        <div>
           <video
-            className="rounded-md"
             autoPlay
             muted
             loop
