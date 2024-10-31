@@ -25,7 +25,7 @@ const image_2 =
 const LandingContext = () => {
   return (
     <div className="grid grid-flow-row gap-2">
-      <Slide direction="right" in={true} timeout={1400}>
+      <Slide direction="right" in={true} timeout={2800}>
         <div
           className="flex rounded-md text-center justify-center"
           style={{
@@ -50,14 +50,14 @@ const LandingContext = () => {
           enhanced by a flat-screen TV.
         </div>
       </Slide>
-      <Fade in={true} timeout={1200}>
+      <Fade in={true} timeout={2800}>
         <div
           className="rounded-md"
           style={{
             fontFamily: AppFont,
             color: "black",
             backgroundColor: "white",
-            opacity: "90%",
+            opacity: "100%",
             padding: "5pt",
           }}
         >
@@ -71,7 +71,7 @@ const LandingContext = () => {
           />
         </div>
       </Fade>
-      <Slide direction="left" in={true} timeout={1400}>
+      <Slide direction="left" in={true} timeout={2800}>
         <div
           className="flex rounded-md text-center justify-center"
           style={{
@@ -107,7 +107,7 @@ export const Landing = ({ topBarOn }) => {
   }, []);
 
   const RenderHeader = () => (
-    <Slide in={true} timeout={500}>
+    <Slide in={true} timeout={1000}>
       <div>
         {topBarOn ? (
           <div>
@@ -144,9 +144,9 @@ export const Landing = ({ topBarOn }) => {
 
   const RenderImages = () => {
     return (
-      <Fade in={true} timeout={1200}>
-        <div style={{ backgroundColor: "white" }} className="rounded-md">
-          <div className="grid grid-cols-3 p-2">
+      <Fade in={true} timeout={2800}>
+        <div style={{ backgroundColor: "white" }} className="rounded-m">
+          <div className="grid md:grid-cols-3 p-2">
             <img src={I8} />
             <img src={I2} />
             <img src={I4} />
@@ -157,7 +157,7 @@ export const Landing = ({ topBarOn }) => {
   };
 
   const RenderLanding = () => (
-    <Fade in={true} timeout={1500}>
+    <Fade in={true} timeout={2500}>
       <div className="h-screen pt-2">
         {topBarOn ? (
           <div>

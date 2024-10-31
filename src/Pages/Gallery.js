@@ -23,63 +23,64 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
 const image_2 =
-  "url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR_fY5XZMLuWjs_uMT7NBbGthDbHaOOeqWOFQMiMHI-yaeES2NmPA_6eU2iCCs7ffEQAIUwei-zVpLHculrWVPxyhs4gArgM1JigYY18Q')";
+  "url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT-Iz_bZOducLNnqNF3T2-evxUSne7PaWPBlYZ9XVihpSPAn40hiS-2h05iii1w6YN3saUY28DY7l-TMPruQ5u7ec8wKQzyoCMfT9d9u48')";
 
 const itemData = [
   {
-    img: I1,
-    title: "Bed",
-  },
-  {
-    img: I2,
-    title: "Books",
-  },
-  {
-    img: I3,
-    title: "Sink",
-  },
-  {
-    img: I4,
+    img: I11,
     title: "Kitchen",
   },
   {
-    img: I5,
+    img: I7,
     title: "Blinds",
   },
   {
-    img: I6,
-    title: "Chairs",
-  },
-  {
-    img: I7,
+    img: I12,
     title: "Laptop",
   },
   {
-    img: I8,
+    img: I14,
     title: "Doors",
   },
   {
-    img: I9,
+    img: I1,
     title: "Coffee",
   },
   {
-    img: I10,
+    img: I2,
     title: "Storage",
   },
   {
-    img: I11,
+    img: I3,
     title: "Candle",
   },
   {
-    img: I12,
+    img: I4,
+    title: "Coffee table",
+  },
+  {
+    img: I5,
+    title: "Coffee table",
+  },
+  {
+    img: I6,
+    title: "Coffee table",
+  },
+  {
+    img: I8,
+    title: "Coffee table",
+  },
+  ,
+  {
+    img: I9,
+    title: "Coffee table",
+  },
+  {
+    img: I10,
     title: "Coffee table",
   },
   {
     img: I13,
-    title: "Coffee table",
-  },
-  {
-    img: I14,
     title: "Coffee table",
   },
 ];
@@ -89,7 +90,11 @@ const GalleryContext = () => {
     <Box>
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
+          <ImageListItem
+            style={{ backgroundColor: "white" }}
+            className="rounded-md p-1"
+            key={item.img}
+          >
             <img
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -112,7 +117,7 @@ export const Gallery = ({ topBarOn }) => {
   }, []);
 
   const RenderHeader = () => (
-    <Slide in={true} timeout={500}>
+    <Slide in={true} timeout={2500}>
       <div>
         {topBarOn ? (
           <div>
@@ -148,7 +153,7 @@ export const Gallery = ({ topBarOn }) => {
   );
 
   const RenderGallery = () => (
-    <Fade in={true} timeout={1500}>
+    <Fade in={true} timeout={2500}>
       <div>
         {topBarOn ? (
           <div>
