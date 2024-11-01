@@ -37,7 +37,14 @@ const LandingContext = () => {
             padding: "5pt",
           }}
         >
-          <video controls muted loop src={kassies2} width={"100%"} type="video/mp4" />
+          <video
+            controls
+            muted
+            loop
+            src={kassies2}
+            width={"100%"}
+            type="video/mp4"
+          />
         </div>
       </Fade>
       <Slide direction="right" in={true} timeout={2800}>
@@ -76,7 +83,14 @@ const LandingContext = () => {
             padding: "5pt",
           }}
         >
-          <video controls muted loop src={kassies} width={"100%"} type="video/mp4" />
+          <video
+            controls
+            muted
+            loop
+            src={kassies}
+            width={"100%"}
+            type="video/mp4"
+          />
         </div>
       </Fade>
       <Slide direction="left" in={true} timeout={2800}>
@@ -167,31 +181,7 @@ export const Landing = ({ topBarOn }) => {
   const RenderLanding = () => (
     <Fade in={true} timeout={2500}>
       <div className="pt-2">
-        {topBarOn ? (
-          <div>
-            {isResponsiveSize ? (
-              <div>
-                <LandingContext />
-              </div>
-            ) : (
-              <div>
-                <LandingContext />
-              </div>
-            )}
-          </div>
-        ) : (
-          <div>
-            {isResponsiveSize ? (
-              <div>
-                <LandingContext />
-              </div>
-            ) : (
-              <div>
-                <LandingContext />
-              </div>
-            )}
-          </div>
-        )}
+        <LandingContext />
       </div>
     </Fade>
   );
