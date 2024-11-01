@@ -80,7 +80,7 @@ const GalleryContext = () => {
   const isResponsiveSize = ["XS", "SM", "MD"].includes(size);
   return (
     <Box>
-      <ImageList variant="masonry" cols={isResponsiveSize ? 2 : 3} gap={8}>
+      <ImageList variant="masonry" cols={isResponsiveSize ? 2 : 3} gap={2}>
         {itemData.map((item) => (
           <ImageListItem
             style={{ backgroundColor: "white" }}
