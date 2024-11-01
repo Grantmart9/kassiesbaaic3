@@ -48,7 +48,7 @@ export const TopBar = ({ setTopBarOn }) => {
         <IconButton href="tel:+27829055060" color={topbartextcolor}>
           <LocalPhoneIcon sx={{ maxWidth: "60%" }} size="small" />
         </IconButton>
-        <IconButton href="https://wa.me/+27734790153" color={topbartextcolor}>
+        <IconButton href="https://wa.me/+27829055060" color={topbartextcolor}>
           <WhatsAppIcon sx={{ maxWidth: "60%" }} size="small" />
         </IconButton>
         <Container>
