@@ -86,7 +86,18 @@ export const Bookings = ({ topBarOn }) => {
   );
 
   return (
-    <div className="block">
+    <div
+      className="block"
+      style={{
+        width: topBarOn
+          ? isResponsiveSize
+            ? "calc(100vw)"
+            : "calc(100vw - 130px)"
+          : isResponsiveSize
+          ? "calc(100vw)"
+          : "calc(100vw)",
+      }}
+    >
       <div
         style={{
           backgroundImage: image_2,
@@ -95,13 +106,14 @@ export const Bookings = ({ topBarOn }) => {
           margin: 0,
           padding: 0,
           height: "100vh",
+
           position: "sticky",
           overflow: "scroll",
           overflowX: "hidden",
         }}
       >
         <RenderHeader />
-        <div className="p-2" style={{ width: "100vw" }}>
+        <div className="p-2 ">
           <SolutionContext />
         </div>
       </div>
