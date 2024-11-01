@@ -37,6 +37,28 @@ const SolutionContext = () => {
         </div>
         <Datepicker />
       </div>
+      <div className="mt-3">
+        <div className="grid md:grid-cols-2 gap-2 p-2">
+          <div className="bg-gray-light rounded-md p-2 align-center justify-center">
+            <div
+              style={{ fontFamily: AppFont }}
+              className="text-gray-dark text-center justify-center text-lg font-bold"
+            >
+              Start date
+            </div>
+            <Datepicker />
+          </div>
+          <div className="bg-gray-light rounded-md p-2 align-center justify-center">
+            <div
+              style={{ fontFamily: AppFont }}
+              className="text-gray-dark text-center justify-center text-lg font-bold"
+            >
+              End date
+            </div>
+            <Datepicker />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -113,7 +135,7 @@ export const Bookings = ({ topBarOn }) => {
         }}
       >
         <RenderHeader />
-        <div className="p-2 ">
+        <div className="p-3 ">
           <SolutionContext />
         </div>
       </div>
