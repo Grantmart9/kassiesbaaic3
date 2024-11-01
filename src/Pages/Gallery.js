@@ -4,7 +4,6 @@ import { Slide } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import { Size } from "components/Display/media-query";
 import { pagetitlecolor, AppFont } from "components/Display/feutures";
-import I1 from "Images/I1.jpg";
 import I2 from "Images/I2.jpg";
 import I3 from "Images/I3.jpg";
 import I4 from "Images/I4.jpg";
@@ -12,7 +11,6 @@ import I5 from "Images/I5.jpg";
 import I6 from "Images/I6.jpg";
 import I7 from "Images/I7.jpg";
 import I8 from "Images/I8.jpg";
-import I9 from "Images/I9.jpg";
 import I10 from "Images/I10.jpg";
 import I11 from "Images/I11.jpg";
 import I12 from "Images/I12.jpg";
@@ -43,10 +41,6 @@ const itemData = [
     title: "Doors",
   },
   {
-    img: I1,
-    title: "Coffee",
-  },
-  {
     img: I2,
     title: "Storage",
   },
@@ -72,10 +66,6 @@ const itemData = [
   },
   ,
   {
-    img: I9,
-    title: "Coffee table",
-  },
-  {
     img: I10,
     title: "Coffee table",
   },
@@ -86,9 +76,11 @@ const itemData = [
 ];
 
 const GalleryContext = () => {
+  var size = Size();
+  const isResponsiveSize = ["XS", "SM", "MD"].includes(size);
   return (
     <Box>
-      <ImageList variant="masonry" cols={3} gap={8}>
+      <ImageList variant="masonry" cols={isResponsiveSize ? 2 : 3} gap={8}>
         {itemData.map((item) => (
           <ImageListItem
             style={{ backgroundColor: "white" }}
