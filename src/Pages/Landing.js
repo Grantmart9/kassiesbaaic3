@@ -37,14 +37,7 @@ const LandingContext = () => {
             padding: "5pt",
           }}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            src={kassies2}
-            width={"100%"}
-            type="video/mp4"
-          />
+          <video controls muted loop src={kassies2} width={"100%"} type="video/mp4" />
         </div>
       </Fade>
       <Slide direction="right" in={true} timeout={2800}>
@@ -83,14 +76,7 @@ const LandingContext = () => {
             padding: "5pt",
           }}
         >
-          <video
-            autoPlay
-            muted
-            loop
-            src={kassies}
-            width={"100%"}
-            type="video/mp4"
-          />
+          <video controls muted loop src={kassies} width={"100%"} type="video/mp4" />
         </div>
       </Fade>
       <Slide direction="left" in={true} timeout={2800}>
@@ -167,7 +153,7 @@ export const Landing = ({ topBarOn }) => {
   const RenderImages = () => {
     return (
       <Fade in={true} timeout={2800}>
-        <div style={{ backgroundColor: "white" }} className="rounded-m">
+        <div style={{ backgroundColor: "white" }} className="rounded-md">
           <div className="grid grid-cols-3 p-2">
             <img src={I8} />
             <img src={I2} />
@@ -211,7 +197,7 @@ export const Landing = ({ topBarOn }) => {
   );
 
   return (
-    <div className="block" >
+    <div className="block">
       <div
         style={{
           backgroundImage: image_1,
