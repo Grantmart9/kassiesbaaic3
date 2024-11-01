@@ -104,16 +104,14 @@ export const Fun = ({ topBarOn }) => {
         <>
           <Fade in={true} timeout={500}>
             <div className="flex text-center justify-center p-2">
-              <div>
-                <ul>
-                  {activities.map((activity, index) => (
-                    <li key={index}>
-                      {index+1}.<h2>{activity.title}</h2>
-                      <p>{activity.description}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul>
+                {activities.map((activity, index) => (
+                  <li key={index}>
+                    {index + 1}.<h2>{activity.title}</h2>
+                    <p>{activity.description}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Fade>
         </>
@@ -121,16 +119,14 @@ export const Fun = ({ topBarOn }) => {
         <>
           <Fade in={true} timeout={1000}>
             <div className="flex text-center justify-center p-2">
-              <div>
-                <ul>
-                  {activities.map((activity, index) => (
-                    <li key={index}>
-                      {index+1}. <h2>{activity.title}</h2>
-                      <p>{activity.description}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul>
+                {activities.map((activity, index) => (
+                  <li key={index}>
+                    {index + 1}. <h2>{activity.title}</h2>
+                    <p>{activity.description}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Fade>
         </>

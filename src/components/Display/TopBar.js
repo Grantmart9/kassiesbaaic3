@@ -45,8 +45,8 @@ export const TopBar = ({ setTopBarOn }) => {
         >
           <MenuIcon />
         </IconButton>
-        <IconButton color={topbartextcolor}>
-          <LocalPhoneIcon sx={{ maxWidth: "60%" }} size="small" />
+        <IconButton href="tel:+27829055060" color={topbartextcolor}>
+          <LocalPhoneIcon  sx={{ maxWidth: "60%" }} size="small" />
         </IconButton>
         <IconButton color={topbartextcolor}>
           <WhatsAppIcon sx={{ maxWidth: "60%" }} size="small" />
