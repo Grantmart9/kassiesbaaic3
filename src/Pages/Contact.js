@@ -21,8 +21,8 @@ const image_2 =
 const ContactContext = () => {
   return (
     <div className="block">
-      <Fade in={true} timeout={2500}>
-        <Card sx={{ bgcolor: "#ebf0f2" }}>
+      <Fade in={true} timeout={1500}>
+        <Card className="mx-auto" sx={{ bgcolor: "#ebf0f2",maxWidth:"80%" }}>
           <CardContent>
             <div className="grid grid-flow-row gap-1 mb-3">
               <div className="grid grid-flow-col gap-1">
@@ -137,7 +137,7 @@ export const Contact = ({ topBarOn }) => {
         }}
       >
         <RenderHeader />
-        <div style={{opacity: "80%"}} className="p-2">
+        <div style={{opacity: "90%"}} className="p-2">
           <ContactContext />
         </div>
       </div>

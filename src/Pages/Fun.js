@@ -11,8 +11,54 @@ import {
   AppFont,
 } from "components/Display/feutures";
 
+const image_2 =
+  "url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQ_L--wIQ77YTahf0Bg8Z7HPcufrqkQXw3EOG-1GAgMEkt0EkHrpAZlOkQc_a0BBYXChD755AifhV--BcAyrLLgGSfzkKzng2bKvgaAZg')";
+
 export const Fun = ({ topBarOn }) => {
-  var size = Size();
+  const size = Size();
+  const isResponsiveSize = ["XS", "SM", "MD"].includes(size);
+
+  const FunContext = () => {
+    return (
+      <div style={{ backgroundColor: "white" }} className="rounded-md">
+        {size == "XS" || size == "SM" || size == "MD" ? (
+          <>
+            <Fade in={true} timeout={500}>
+              <div className="flex text-center justify-center p-2">
+                <ul>
+                  {activities.map((activity, index) => (
+                    <li key={index}>
+                      <div style={{ fontFamily: AppFont }} clasName="font-bold">
+                        {activity.title}
+                      </div>
+                      <p style={{ fontFamily: AppFont }}>{activity.description}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Fade>
+          </>
+        ) : (
+          <>
+            <Fade in={true} timeout={1000}>
+              <div className="flex text-center justify-center p-2">
+                <ul>
+                  {activities.map((activity, index) => (
+                    <li key={index}>
+                      <div style={{ fontFamily: AppFont }} clasName="font-bold">
+                        {activity.title}
+                      </div>
+                      <p style={{ fontFamily: AppFont }}>{activity.description}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Fade>
+          </>
+        )}
+      </div>
+    );
+  };
 
   const activities = [
     {
@@ -70,67 +116,69 @@ export const Fun = ({ topBarOn }) => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
+  const RenderHeader = () => (
+    <Slide in={true} timeout={1000}>
+      <div>
+        {topBarOn ? (
+          <div>
+            {isResponsiveSize ? (
+              <h1
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center text-3xl mt-32"
+              ></h1>
+            ) : (
+              <h1
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center text-3xl mt-20"
+              ></h1>
+            )}
+          </div>
+        ) : (
+          <div>
+            {isResponsiveSize ? (
+              <h1
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center  text-3xl mt-20"
+              ></h1>
+            ) : (
+              <h1
+                style={{ color: pagetitlecolor, fontFamily: AppFont }}
+                className="text-center justify-center text-3xl mt-20"
+              ></h1>
+            )}
+          </div>
+        )}
+      </div>
+    </Slide>
+  );
+
   return (
     <div className="block h-auto">
-      {size == "XS" || size == "SM" || size == "MD" ? (
-        <Slide in={true} timeout={500}>
-          {topBarOn ? (
-            <h1
-              style={{ color: pagetitlecolor, fontFamily: AppFont }}
-              className="text-center font-bold text-3xl mt-32 pt-2"
-            >
-              Fun Things To Do
-            </h1>
-          ) : (
-            <h1
-              style={{ color: pagetitlecolor, fontFamily: AppFont }}
-              className="text-center font-bold text-3xl mt-20 pt-2"
-            >
-              Fun Things To Do
-            </h1>
-          )}
-        </Slide>
-      ) : (
-        <Fade in={true} timeout={1000}>
-          <h1
-            style={{ color: pagetitlecolor, fontFamily: AppFont }}
-            className="text-center font-bold text-3xl mt-16 pt-2"
-          >
-            Fun Things To Do
-          </h1>
-        </Fade>
-      )}
-      {size == "XS" || size == "SM" || size == "MD" ? (
-        <>
-          <Fade in={true} timeout={500}>
-            <div className="flex text-center justify-center p-2">
-              <ul>
-                {activities.map((activity, index) => (
-                  <li key={index}>
-                    {index + 1}.<h2>{activity.title}</h2>
-                    <p>{activity.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Fade>
-        </>
-      ) : (
-        <>
-          <Fade in={true} timeout={1000}>
-            <div className="flex text-center justify-center p-2">
-              <ul>
-                {activities.map((activity, index) => (
-                  <li key={index}>
-                    {index + 1}. <h2>{activity.title}</h2>
-                    <p>{activity.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Fade>
-        </>
-      )}
+      <div className="block">
+        <div
+          style={{
+            backgroundImage: image_2,
+            backgroundSize: "cover",
+            opacity: "85%",
+            margin: 0,
+            padding: 0,
+            width: topBarOn
+              ? isResponsiveSize
+                ? "calc(100vw)"
+                : "calc(100vw - 130px)"
+              : isResponsiveSize,
+            height: "100vh",
+            position: "sticky",
+            overflow: "scroll",
+            overflowX: "hidden",
+          }}
+        >
+          <RenderHeader />
+          <div style={{ opacity: "80%" }} className="p-2">
+            <FunContext />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
