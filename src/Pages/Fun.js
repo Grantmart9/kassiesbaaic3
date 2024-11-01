@@ -14,6 +14,58 @@ import {
 export const Fun = ({ topBarOn }) => {
   var size = Size();
 
+  const activities = [
+    {
+      title: "Waenhuiskrans Nature Reserve",
+      description:
+        "Explore stunning coastal scenery, hiking trails, and unique rock formations. Don't miss the famous Waenhuiskrans Cave.",
+    },
+    {
+      title: "Bredasdorp",
+      description:
+        "Visit the nearby town for charming shops and the Shipwreck Museum, showcasing the area's maritime history.",
+    },
+    {
+      title: "Cape Agulhas",
+      description:
+        "Visit the southernmost tip of Africa, see the iconic lighthouse, and enjoy views where the Atlantic and Indian Oceans meet.",
+    },
+    {
+      title: "Struisbaai",
+      description:
+        "Enjoy the beautiful beach, stroll along the promenade, or try your hand at fishing.",
+    },
+    {
+      title: "Agulhas National Park",
+      description:
+        "Explore this scenic park featuring unique fynbos vegetation, hiking trails, and birdwatching opportunities.",
+    },
+    {
+      title: "Elim",
+      description:
+        "A historic Moravian mission village with picturesque white-washed buildings and a tranquil atmosphere.",
+    },
+    {
+      title: "Dolphin and Whale Watching",
+      description:
+        "Depending on the season, take boat trips from nearby towns for marine wildlife viewing.",
+    },
+    {
+      title: "Sandboarding and Quad Biking",
+      description: "Head to the nearby dunes for some adventure sports.",
+    },
+    {
+      title: "Local Cuisine",
+      description:
+        "Sample fresh seafood at local restaurants or explore local markets for regional delicacies.",
+    },
+    {
+      title: "Horse Riding",
+      description:
+        "Look for stables offering beach or trail rides for a unique way to explore the coastline.",
+    },
+  ];
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -52,21 +104,16 @@ export const Fun = ({ topBarOn }) => {
         <>
           <Fade in={true} timeout={500}>
             <div className="flex text-center justify-center p-2">
-              There are many fun things to do in Arniston, South Africa,
-              including visiting nature reserves, hiking, and exploring a
-              fishing village: De Mond Nature Reserve: A 960-hectare reserve
-              with hiking trails, a picnic site, and an overnight cottage
-              Waenhuiskrans Cave: A large, naturally carved cave that's a hidden
-              natural wonder Waenhuiskrans Nature Reserve: A reserve with dunes
-              that offer views of the ocean and sea cliffs Spookdraai hiking
-              trail: A well-maintained trail with a beautiful view, but the wind
-              can be strong on the hill Kassiesbaai: A 200-year-old fishing
-              village and national heritage site Shipwreck Museum Bredasdorp: A
-              small museum in Bredasdorp that tells the story of the Arniston
-              shipwreck and other famous shipwrecks in the area Angling: Fish in
-              the area Swimming: Swim in the area Whale watching: Watch whales
-              in the area See fishing boats: Watch fishing boats return to the
-              bay
+              <div>
+                <ul>
+                  {activities.map((activity, index) => (
+                    <li key={index}>
+                      {index+1}.<h2>{activity.title}</h2>
+                      <p>{activity.description}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Fade>
         </>
@@ -74,21 +121,16 @@ export const Fun = ({ topBarOn }) => {
         <>
           <Fade in={true} timeout={1000}>
             <div className="flex text-center justify-center p-2">
-              There are many fun things to do in Arniston, South Africa,
-              including visiting nature reserves, hiking, and exploring a
-              fishing village: De Mond Nature Reserve: A 960-hectare reserve
-              with hiking trails, a picnic site, and an overnight cottage
-              Waenhuiskrans Cave: A large, naturally carved cave that's a hidden
-              natural wonder Waenhuiskrans Nature Reserve: A reserve with dunes
-              that offer views of the ocean and sea cliffs Spookdraai hiking
-              trail: A well-maintained trail with a beautiful view, but the wind
-              can be strong on the hill Kassiesbaai: A 200-year-old fishing
-              village and national heritage site Shipwreck Museum Bredasdorp: A
-              small museum in Bredasdorp that tells the story of the Arniston
-              shipwreck and other famous shipwrecks in the area Angling: Fish in
-              the area Swimming: Swim in the area Whale watching: Watch whales
-              in the area See fishing boats: Watch fishing boats return to the
-              bay
+              <div>
+                <ul>
+                  {activities.map((activity, index) => (
+                    <li key={index}>
+                      {index+1}. <h2>{activity.title}</h2>
+                      <p>{activity.description}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Fade>
         </>
