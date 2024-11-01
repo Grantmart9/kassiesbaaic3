@@ -16,49 +16,51 @@ import {
 import Card from "@mui/material/Card";
 
 const image_2 =
-  "url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT-Iz_bZOducLNnqNF3T2-evxUSne7PaWPBlYZ9XVihpSPAn40hiS-2h05iii1w6YN3saUY28DY7l-TMPruQ5u7ec8wKQzyoCMfT9d9u48')";
+  "url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQhTDyc7W-A5aQVSKqLfp6rL8LSOGi_fQGkWSmnh7C1Qs0VWw7lmcnbbhmFTXuVaL9g22FCiYN_z3D9uF8zIgUhS8-h7GAyBkrMj6-nKX4')";
 
 const ContactContext = () => {
   return (
     <div className="block">
-      <Card sx={{ bgcolor: "#ebf0f2", opacity: "80%" }}>
-        <CardContent>
-          <div className="grid grid-flow-row gap-1 mb-3">
-            <div className="grid grid-flow-col gap-1">
-              email:<h1> evandre@telkomsa.co.za</h1>
-            </div>
-            <div className="grid grid-flow-col gap-1">
-              phone:<h1> +27 82 905 5060</h1>
-            </div>
-          </div>
-          <Typography variant="body1">
-            <div className="grid grid-rows-1 gap-1">
+      <Fade in={true} timeout={2500}>
+        <Card sx={{ bgcolor: "#ebf0f2" }}>
+          <CardContent>
+            <div className="grid grid-flow-row gap-1 mb-3">
               <div className="grid grid-flow-col gap-1">
-                <div className="flex text-center my-auto">Name:</div>
-                <TextField size="small" fullWidth="true" />
+                email:<h1> evandre@telkomsa.co.za</h1>
               </div>
               <div className="grid grid-flow-col gap-1">
-                <div className="flex text-center my-auto">Email:</div>
-                <TextField size="small" fullWidth="true" />
-              </div>
-              <div className="grid grid-flow-col gap-1">
-                <div className="flex text-center my-auto">Cell:</div>
-                <TextField size="small" fullWidth="true" />
+                phone:<h1> +27 82 905 5060</h1>
               </div>
             </div>
-          </Typography>
-          <div className="text-center justify-center font-bold">Query</div>
-          <TextField fullWidth="true" />
-          <div className="flex align-center justify-center mt-3">
-            <Button
-              className="rounded-md"
-              sx={{ backgroundColor: "black", color: "white" }}
-            >
-              Submit
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+            <Typography variant="body1">
+              <div className="grid grid-rows-1 gap-1">
+                <div className="grid grid-flow-col gap-1">
+                  <div className="flex text-center my-auto">Name:</div>
+                  <TextField size="small" fullWidth="true" />
+                </div>
+                <div className="grid grid-flow-col gap-1">
+                  <div className="flex text-center my-auto">Email:</div>
+                  <TextField size="small" fullWidth="true" />
+                </div>
+                <div className="grid grid-flow-col gap-1">
+                  <div className="flex text-center my-auto">Cell:</div>
+                  <TextField size="small" fullWidth="true" />
+                </div>
+              </div>
+            </Typography>
+            <div className="text-center justify-center font-bold">Query</div>
+            <TextField fullWidth="true" />
+            <div className="flex align-center justify-center mt-3">
+              <Button
+                className="rounded-md"
+                sx={{ backgroundColor: "black", color: "white" }}
+              >
+                Submit
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </Fade>
     </div>
   );
 };
@@ -135,7 +137,7 @@ export const Contact = ({ topBarOn }) => {
         }}
       >
         <RenderHeader />
-        <div className="p-2">
+        <div style={{opacity: "80%"}} className="p-2">
           <ContactContext />
         </div>
       </div>

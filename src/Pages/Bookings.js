@@ -23,42 +23,40 @@ import web4 from "Images/website4.png";
 import { Datepicker } from "components/Datepicker";
 
 const image_2 =
-  "url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR_fY5XZMLuWjs_uMT7NBbGthDbHaOOeqWOFQMiMHI-yaeES2NmPA_6eU2iCCs7ffEQAIUwei-zVpLHculrWVPxyhs4gArgM1JigYY18Q')";
+  "url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQ_L--wIQ77YTahf0Bg8Z7HPcufrqkQXw3EOG-1GAgMEkt0EkHrpAZlOkQc_a0BBYXChD755AifhV--BcAyrLLgGSfzkKzng2bKvgaAZg')";
 
 const SolutionContext = () => {
   return (
-    <div sx={{ bgcolor: "#7d9db5" }}>
-      <div className="bg-gray-light rounded-md p-2 align-center justify-center">
-        <div
-          style={{ fontFamily: AppFont }}
-          className="text-gray-dark text-center justify-center text-lg font-bold"
-        >
-          Available dates
-        </div>
-        <Datepicker />
-      </div>
-      <div className="mt-3">
-        <div className="grid md:grid-cols-2 gap-2 p-2">
-          <div className="bg-gray-light rounded-md p-2 align-center justify-center">
-            <div
-              style={{ fontFamily: AppFont }}
-              className="text-gray-dark text-center justify-center text-lg font-bold"
-            >
-              Start date
-            </div>
+    <div>
+      <Fade in={true} timeout={2500}>
+        <div sx={{ bgcolor: "#7d9db5" }}>
+          <div className="bg-white rounded-md p-2 align-center justify-center">
             <Datepicker />
           </div>
-          <div className="bg-gray-light rounded-md p-2 align-center justify-center">
-            <div
-              style={{ fontFamily: AppFont }}
-              className="text-gray-dark text-center justify-center text-lg font-bold"
-            >
-              End date
+          <div className="mt-3">
+            <div className="grid md:grid-cols-2 gap-2 p-2">
+              <div className="bg-gray-light rounded-md p-2 align-center justify-center">
+                <div
+                  style={{ fontFamily: AppFont }}
+                  className="text-gray-dark text-center justify-center text-lg font-bold"
+                >
+                  Start date
+                </div>
+                <Datepicker />
+              </div>
+              <div className="bg-gray-light rounded-md p-2 align-center justify-center">
+                <div
+                  style={{ fontFamily: AppFont }}
+                  className="text-gray-dark text-center justify-center text-lg font-bold"
+                >
+                  End date
+                </div>
+                <Datepicker />
+              </div>
             </div>
-            <Datepicker />
           </div>
         </div>
-      </div>
+      </Fade>
     </div>
   );
 };
