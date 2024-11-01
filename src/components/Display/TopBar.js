@@ -54,7 +54,7 @@ export const TopBar = ({ setTopBarOn }) => {
         <Container>
           <div
             style={{ color: topbartextcolor, fontFamily: AppFont }}
-            className={`text-gray-light text-center text-${
+            className={`text-gray-light text-center font-bold text-${
               isResponsiveSize ? "l" : "2xl"
             } mr-${isResponsiveSize ? "36" : "20"} `}
           >

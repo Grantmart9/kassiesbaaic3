@@ -52,17 +52,21 @@ export const Fun = ({ topBarOn }) => {
         <>
           <Fade in={true} timeout={500}>
             <div className="flex text-center justify-center p-2">
-              Environmental security focuses on safeguarding the natural
-              environment to ensure a healthy, sustainable quality of life for
-              current and future generations. It involves protecting ecosystems,
-              ensuring access to clean air, water, and soil, and mitigating the
-              impacts of climate change and pollution. By promoting sustainable
-              practices, effective waste management, and conservation efforts,
-              environmental security aims to prevent environmental degradation
-              and enhance resilience against natural disasters. This holistic
-              approach ensures that communities can thrive in a safe and stable
-              environment, supporting both ecological balance and human
-              well-being.
+              There are many fun things to do in Arniston, South Africa,
+              including visiting nature reserves, hiking, and exploring a
+              fishing village: De Mond Nature Reserve: A 960-hectare reserve
+              with hiking trails, a picnic site, and an overnight cottage
+              Waenhuiskrans Cave: A large, naturally carved cave that's a hidden
+              natural wonder Waenhuiskrans Nature Reserve: A reserve with dunes
+              that offer views of the ocean and sea cliffs Spookdraai hiking
+              trail: A well-maintained trail with a beautiful view, but the wind
+              can be strong on the hill Kassiesbaai: A 200-year-old fishing
+              village and national heritage site Shipwreck Museum Bredasdorp: A
+              small museum in Bredasdorp that tells the story of the Arniston
+              shipwreck and other famous shipwrecks in the area Angling: Fish in
+              the area Swimming: Swim in the area Whale watching: Watch whales
+              in the area See fishing boats: Watch fishing boats return to the
+              bay
             </div>
           </Fade>
         </>
@@ -70,17 +74,21 @@ export const Fun = ({ topBarOn }) => {
         <>
           <Fade in={true} timeout={1000}>
             <div className="flex text-center justify-center p-2">
-              Environmental security focuses on safeguarding the natural
-              environment to ensure a healthy, sustainable quality of life for
-              current and future generations. It involves protecting ecosystems,
-              ensuring access to clean air, water, and soil, and mitigating the
-              impacts of climate change and pollution. By promoting sustainable
-              practices, effective waste management, and conservation efforts,
-              environmental security aims to prevent environmental degradation
-              and enhance resilience against natural disasters. This holistic
-              approach ensures that communities can thrive in a safe and stable
-              environment, supporting both ecological balance and human
-              well-being.
+              There are many fun things to do in Arniston, South Africa,
+              including visiting nature reserves, hiking, and exploring a
+              fishing village: De Mond Nature Reserve: A 960-hectare reserve
+              with hiking trails, a picnic site, and an overnight cottage
+              Waenhuiskrans Cave: A large, naturally carved cave that's a hidden
+              natural wonder Waenhuiskrans Nature Reserve: A reserve with dunes
+              that offer views of the ocean and sea cliffs Spookdraai hiking
+              trail: A well-maintained trail with a beautiful view, but the wind
+              can be strong on the hill Kassiesbaai: A 200-year-old fishing
+              village and national heritage site Shipwreck Museum Bredasdorp: A
+              small museum in Bredasdorp that tells the story of the Arniston
+              shipwreck and other famous shipwrecks in the area Angling: Fish in
+              the area Swimming: Swim in the area Whale watching: Watch whales
+              in the area See fishing boats: Watch fishing boats return to the
+              bay
             </div>
           </Fade>
         </>
