@@ -20,7 +20,7 @@ const image_2 =
 
 const ContactContext = () => {
   return (
-    <div className="flex align-center justify-center">
+    <div className="block">
       <Card sx={{ bgcolor: "#ebf0f2", opacity: "80%" }}>
         <CardContent>
           <div className="grid grid-flow-row gap-1 mb-3">
@@ -123,6 +123,11 @@ export const Contact = ({ topBarOn }) => {
           opacity: "85%",
           margin: 0,
           padding: 0,
+          width: topBarOn
+            ? isResponsiveSize
+              ? "calc(100vw)"
+              : "calc(100vw - 130px)"
+            : isResponsiveSize,
           height: "100vh",
           position: "sticky",
           overflow: "scroll",
