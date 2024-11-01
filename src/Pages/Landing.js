@@ -11,6 +11,7 @@ import {
   fontType,
 } from "components/Display/feutures";
 import kassies from "Videos/kassies.mp4";
+import kassies2 from "Videos/kassies2.mp4";
 import I8 from "Images/I8.jpg";
 import I2 from "Images/I2.jpg";
 import I4 from "Images/I4.jpg";
@@ -25,6 +26,27 @@ const image_2 =
 const LandingContext = () => {
   return (
     <div className="grid grid-flow-row gap-2">
+      <Fade in={true} timeout={2800}>
+        <div
+          className="rounded-md"
+          style={{
+            fontFamily: AppFont,
+            color: "black",
+            backgroundColor: "white",
+            opacity: "100%",
+            padding: "5pt",
+          }}
+        >
+          <video
+            autoPlay
+            muted
+            loop
+            src={kassies2}
+            width={"100%"}
+            type="video/mp4"
+          />
+        </div>
+      </Fade>
       <Slide direction="right" in={true} timeout={2800}>
         <div
           className="flex rounded-md text-center justify-center"
@@ -146,7 +168,7 @@ export const Landing = ({ topBarOn }) => {
     return (
       <Fade in={true} timeout={2800}>
         <div style={{ backgroundColor: "white" }} className="rounded-m">
-          <div className="grid md:grid-cols-3 p-2">
+          <div className="grid grid-cols-3 p-2">
             <img src={I8} />
             <img src={I2} />
             <img src={I4} />
