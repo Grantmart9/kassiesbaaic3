@@ -180,7 +180,7 @@ export const Landing = ({ topBarOn }) => {
 
   const RenderLanding = () => (
     <Fade in={true} timeout={2500}>
-      <div className="h-screen pt-2">
+      <div className="pt-2">
         {topBarOn ? (
           <div>
             {isResponsiveSize ? (
@@ -211,7 +211,7 @@ export const Landing = ({ topBarOn }) => {
   );
 
   return (
-    <div className="block">
+    <div className="block" >
       <div
         style={{
           backgroundImage: image_1,
@@ -219,7 +219,9 @@ export const Landing = ({ topBarOn }) => {
           opacity: "85%",
           margin: 0,
           padding: 0,
+          height: "100vh",
           position: "sticky",
+          overflow: "scroll",
           overflowX: "hidden",
         }}
       >
