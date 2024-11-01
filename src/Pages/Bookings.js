@@ -101,7 +101,7 @@ export const Bookings = ({ topBarOn }) => {
         }}
       >
         <RenderHeader />
-        <div className="p-2">
+        <div className="p-2" style={{ width: "100vw" }}>
           <SolutionContext />
         </div>
       </div>
